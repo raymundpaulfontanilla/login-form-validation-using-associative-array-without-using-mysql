@@ -9,14 +9,14 @@
 </head>
 <body>
     <div class="container min-vh-100 d-flex justify-content-center align-items-center">
-        <form class="shadow-lg p-5 m-5 bg-body-tertiary rounded">
+        <form class="shadow-lg p-5 m-5 bg-body-tertiary rounded" method="POST" action="../config/php/login-user.php">
             <div class="mb-3">
-              <label for="exampleInputEmail1" class="form-label">Email</label>
-              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+              <label for="email" class="form-label">Email</label>
+              <input type="email" class="form-control" id="email" name="email">
             </div>
             <div class="mb-3">
-              <label for="exampleInputPassword1" class="form-label">Password</label>
-              <input type="password" class="form-control" id="exampleInputPassword1">
+              <label for="password" class="form-label">Password</label>
+              <input type="password" class="form-control" id="password" name="password">
             </div>
             <button type="submit" class="btn btn-primary">Login</button>
             <a href="register.php"><span>Don't have an account?</span></a>
