@@ -9,7 +9,7 @@
 </head>
 <body>
     <div class="container min-vh-100 d-flex justify-content-center align-items-center">
-        <form class="shadow-lg p-5 m-5 bg-body-tertiary rounded" method="POST" action="process.php">
+        <form class="shadow-lg p-5 m-5 bg-body-tertiary rounded" method="POST" action="../config/php/register-user.php">
             <div class="mb-3">
                 <label for="name" class="form-label">Name</label>
                 <input type="text" class="form-control" id="name" name="name">
@@ -23,8 +23,8 @@
               <input type="password" class="form-control" id="password" name="password">
             </div>
             <div class="mb-3">
-                <label for="confirm-password" class="form-label">Confirm Password</label>
-                <input type="password" class="form-control" id="confirm-password" name="confirm-password">
+                <label for="confirmPassword" class="form-label">Confirm Password</label>
+                <input type="password" class="form-control" id="confirmPassword" name="confirmPassword">
               </div>
             <button type="submit" class="btn btn-primary">Register</button>
             <a href="login.php"><span>Already have an account?</span></a>
