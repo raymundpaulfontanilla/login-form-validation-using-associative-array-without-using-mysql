@@ -1,4 +1,4 @@
-<?php include '../config/php/session.php'; ?>
+<?php include '../validation/config/session.php'; ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,7 +10,7 @@
 </head>
 <body>
     <div class="container min-vh-100 d-flex justify-content-center align-items-center">
-      <form class="shadow-lg p-5 m-5 bg-body-tertiary rounded" method="POST" action="../config/php/register-user.php">
+      <form class="shadow-lg p-5 m-5 bg-body-tertiary rounded" method="POST" action="../validation/register-user.php">
         <?php
           if (isset($_SESSION['errorMessage'])) {
             echo 
@@ -18,7 +18,7 @@
               '.$_SESSION['errorMessage'].'
             </div>';
           }
-          include '../config/php/session-destroy.php';
+          include '../validation/config/session-destroy.php';
         ?>
           <div class="mb-3">
               <label for="name" class="form-label">Name</label>
