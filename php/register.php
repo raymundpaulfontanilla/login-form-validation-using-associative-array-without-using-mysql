@@ -18,6 +18,7 @@
               '.$_SESSION['errorMessage'].'
             </div>';
           }
+          include '../config/php/session-destroy.php';
         ?>
           <div class="mb-3">
               <label for="name" class="form-label">Name</label>
