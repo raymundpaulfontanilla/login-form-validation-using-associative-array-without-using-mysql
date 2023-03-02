@@ -1,3 +1,4 @@
+<?php include '../config/php/session.php'; ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,6 +11,14 @@
 <body>
     <div class="container min-vh-100 d-flex justify-content-center align-items-center">
       <form class="shadow-lg p-5 m-5 bg-body-tertiary rounded" method="POST" action="../config/php/register-user.php">
+        <?php
+          if (isset($_SESSION['errorMessage'])) {
+            echo 
+            '<div class="alert alert-danger" role="alert">
+              '.$_SESSION['errorMessage'].'
+            </div>';
+          }
+        ?>
           <div class="mb-3">
               <label for="name" class="form-label">Name</label>
               <input type="text" class="form-control" id="name" name="name" required>
