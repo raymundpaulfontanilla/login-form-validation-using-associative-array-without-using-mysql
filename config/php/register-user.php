@@ -1,4 +1,5 @@
 <?php
+    include 'session.php';
     $name = $_POST['name'];
     $email = $_POST['email'];
     $password = $_POST['password'];
@@ -7,7 +8,8 @@
     $userData = array($name => $name, $email => $email, $password => $password, $confirmPassword => $confirmPassword);
 
     if ($userData[$password] != $userData[$confirmPassword]) {
-        echo "Password do not match";
+        $_SESSION['errorMessage'] = 'Password do not match!';
+        header('location: ../../php/register.php ');
     } else {
        header('location: ../../php/login.php ');
     }
