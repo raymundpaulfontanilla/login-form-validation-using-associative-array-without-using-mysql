@@ -1,3 +1,4 @@
+<?php include '../validation/config/session.php'; ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,7 +10,16 @@
 </head>
 <body>
     <div class="container min-vh-100 d-flex justify-content-center align-items-center">
-        <form class="shadow-lg p-5 m-5 bg-body-tertiary rounded" method="POST" action="../config/php/login-user.php">
+        <form class="shadow-lg p-5 m-5 bg-body-tertiary rounded" method="POST" action="../validation/login-user.php">
+            <?php 
+              if (isset($_SESSION['successMessage'])) {
+                echo
+                  '<div class="alert alert-success" role="alert">
+                  '.$_SESSION['successMessage'].'
+                </div>';
+              }
+              include '../validation/config/session-destroy.php';
+            ?>
             <div class="mb-3">
               <label for="email" class="form-label">Email</label>
               <input type="email" class="form-control" id="email" name="email">
