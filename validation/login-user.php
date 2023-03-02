@@ -1,4 +1,5 @@
 <?php
+    include '../validation/config/session.php';
     $email = $_POST['email'];
     $password = $_POST['password'];
 
@@ -6,11 +7,9 @@
 
     if ($userData[$email] != "" && $userData[$password] != "") {
         if ($userData[$email] !== $userData[$email] && $userData[$password] !== $userData[$password]) {
-            echo "email or password is incorrect, Please try again!";
+            $_SESSION['errorMessage'] = "email or password is incorrect, Please try again!";
         } else {
-            header('location: ../../php/index.php');
+            header('location: ../php/index.php');
         }
-    } else {
-        echo "email and password must be filled";
     }
 ?>
