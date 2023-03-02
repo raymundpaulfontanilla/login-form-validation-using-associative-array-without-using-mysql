@@ -11,6 +11,7 @@
         $_SESSION['errorMessage'] = 'Password do not match!';
         header('location: ../php/register.php');
     } else {
+        $_SESSION['successMessage'] = "Account successfully created";
        header('location: ../php/login.php');
     }
 ?>
