@@ -5,9 +5,9 @@
     $password = $_POST['password'];
     $confirmPassword = $_POST['confirmPassword'];
 
-    $userData = array($name => $name, $email => $email, $password => $password, $confirmPassword => $confirmPassword);
+    $_SESSION['userData'] = array($name => $name, $email => $email, $password => $password, $confirmPassword => $confirmPassword);
 
-    if ($userData[$password] != $userData[$confirmPassword]) {
+    if ($_SESSION['userData'][$password] != $_SESSION['userData'][$confirmPassword]) {
         $_SESSION['errorMessage'] = 'Password do not match!';
         header('location: ../php/register.php');
     } else {
