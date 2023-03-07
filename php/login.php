@@ -1,4 +1,4 @@
-<?php include '../validation/config/session.php'; ?>
+<?php require '../validation/config/session.php'; ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,7 +18,7 @@
                   '.$_SESSION['successMessage'].'
                 </div>';
               }
-              include '../validation/config/session-destroy.php';
+              require '../validation/config/session-destroy.php';
             ?>
             <div class="mb-3">
               <label for="email" class="form-label">Email</label>

@@ -1,5 +1,5 @@
 <?php
-    include '../validation/config/session.php';
+    require '../validation/config/session.php';
     $name = $_POST['name'];
     $email = $_POST['email'];
     $password = $_POST['password'];
