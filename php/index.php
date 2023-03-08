@@ -1,3 +1,4 @@
+<?php require '../validation/config/session.php'; ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,7 +9,7 @@
 </head>
 <body>
     <?php
-        echo "Welcome";
+        echo $_SESSION['userData']['name'];
     ?>
 </body>
 </html>
